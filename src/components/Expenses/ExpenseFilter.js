@@ -10,16 +10,9 @@ const ExpensesFilter = (props) => {
     const handleDropDownChange = (event) =>
     {
 
-        /* create an object to send to parent, NewComponentExpenses */
-        /*
-        const selectedYear = {
-            ...event
-        }
-        */
-
         props.onSelectedNewYear(event.target.value);
 
-        //console.log("the year you chose is " + event.target.value);
+        console.log("the year you chose is " + event.target.value);
     }
 
 

@@ -6,23 +6,25 @@ import React, { useState } from 'react';
 
 const NewComponentExpenses = (props) => {
 
-
     const[filteredYear, setFilteredYear] = useState('2021');
-
 
     const selectedNewYear = (selectedYear) =>
     {
         setFilteredYear(selectedYear);
 
-        console.log("Aye the user selected the year " + selectedYear);
+        //console.log("The year chosen = " + selectedYear);
+
     }
 
+    const filteredExpenses = props.items.filter(expense =>{
+        return expense.date.getFullYear().toString() === filteredYear;
+    }); 
 
     return (
         <div>
             <Card className="expenses">
                 <ExpenseFilter selected={filteredYear} onSelectedNewYear={selectedNewYear}/> 
-                {props.items.map((expense) => (
+                {filteredExpenses.map((expense) => (
                     <ExpenseItem 
                         key = {expense.id}
                         title = {expense.title} 

@@ -7,7 +7,7 @@ import NewExpense from './components/NewExpense/NewExpense';
 const DUMMY_EXPENSES = [
   { id: 'e1', title: 'FuboTV', amount: 27.93, date: new Date(2021, 11, 18) },
   { id: 'e2', title: 'Xbox Game Pass', amount: 15.00, date: new Date(2021, 11, 14) },
-  { id: 'e3', title: 'Xfinity WiFi', amount: 80.93, date: new Date(2021, 11, 1) },
+  { id: 'e3', title: 'Xfinity WiFi', amount: 80.93, date: new Date(2020, 11, 1) },
   { id: 'e4', title: 'Apple News', amount: 5.00, date: new Date(2021, 11, 11) },
 ];
 
