@@ -1,4 +1,4 @@
-import ExpenseItem from './ExpenseItem';
+import ExpensesList from './ExpensesList';
 import './NewComponentExpenses.css';
 import Card from '../UI/Card';
 import ExpenseFilter from './ExpenseFilter';
@@ -19,32 +19,16 @@ const NewComponentExpenses = (props) => {
         return expense.date.getFullYear().toString() === filteredYear;
     }); 
 
-    /* variable to point to message to user if there is no elements on that year or a filtered array */
-    let expensesContent = <p>No expenses found.</p>;
-
-    /* if length is greater than 0, there is expenses in the year the user selected */
-    if(filteredExpenses.length > 0)
-    {
-        expensesContent = filteredExpenses.map((expense) => (
-            <ExpenseItem 
-                key = {expense.id}
-                title = {expense.title} 
-                amount = {expense.amount}
-                date = {expense.date}
-            />
-        ));
-    }
-
     return (
-        <div>
+        <li>
             <Card className="expenses">
                 <ExpenseFilter 
                     selected={filteredYear} 
                     onSelectedNewYear={selectedNewYear}
                 /> 
-                {expensesContent}
+                <ExpensesList items={filteredExpenses}/>
             </Card>
-        </div>
+        </li>
     );
 }
 export default NewComponentExpenses;
