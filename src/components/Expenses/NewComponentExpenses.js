@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 const NewComponentExpenses = (props) => {
 
-    const[filteredYear, setFilteredYear] = useState('2021');
+    const[filteredYear, setFilteredYear] = useState('2021'); // setting default year
 
     const selectedNewYear = (selectedYear) =>
     {
@@ -16,6 +16,7 @@ const NewComponentExpenses = (props) => {
 
     /* filter parent array based on year the user selects */
     const filteredExpenses = props.items.filter(expense =>{
+        console.log("filtered year is " + filteredYear);
         return expense.date.getFullYear().toString() === filteredYear;
     }); 
 
