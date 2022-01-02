@@ -71,7 +71,7 @@ const ExpenseForm = (props) =>
         /* create object to send to parent, NewExpense */
         const expenseData = {
             title: enteredTitle,
-            amount: enteredAmount,
+            amount: +enteredAmount,
             date: new Date(enteredDate)
         };
 

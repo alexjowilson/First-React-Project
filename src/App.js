@@ -5,10 +5,13 @@ import NewExpense from './components/NewExpense/NewExpense';
 
 /* Dummy expenses */
 const DUMMY_EXPENSES = [
-  { id: 'e1', title: 'FuboTV', amount: 27.93, date: new Date(2021, 11, 18) },
-  { id: 'e2', title: 'Xbox Game Pass', amount: 15.00, date: new Date(2021, 11, 14) },
-  { id: 'e3', title: 'Xfinity WiFi', amount: 80.93, date: new Date(2020, 11, 1) },
+  { id: 'e1', title: 'FuboTV', amount: 33.01, date: new Date(2021, 12, 14) },
+  { id: 'e2', title: 'Xbox Game Pass', amount: 16.54, date: new Date(2021, 12, 22) },
+  { id: 'e3', title: 'Xfinity WiFi', amount: 84.99, date: new Date(2020, 11, 1) },
   { id: 'e4', title: 'Apple News', amount: 5.00, date: new Date(2021, 11, 11) },
+  { id: 'e5', title: 'Rent', amount: 1200, date: new Date(2022, 0, 1) },
+  { id: 'e6', title: 'Xbox Game Pass', amount: 16.54, date: new Date(2022, 1, 22) },
+  { id: 'e7', title: 'FuboTV', amount: 33.01, date: new Date(2022, 2, 14) },
 ];
 
 const App = () => {
